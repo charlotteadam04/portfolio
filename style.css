@@ -1,0 +1,581 @@
+/* ==========================
+   1. Réinitialisation 
+========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* ==========================
+   2. Utilitaires
+========================== */
+
+.subtitle {
+  font-size: 1.5vw;
+  margin-bottom: 40px;
+}
+
+/* ==========================
+   3. Hero / Page d’accueil
+========================== */
+.hero {
+  background-image: url('Images/Photo_CV_Charlotte.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  color: white;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.text-content {
+  text-align: center;
+  margin-bottom: 80px;
+  margin-top: 150px;
+}
+
+.text-content h1 {
+  font-size: 6vw;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* ==========================
+   4. Boutons
+========================== */
+.contact-button{
+  background-color: white;
+  color: #2a70dd;
+  border: 2px solid #2a70dd;
+  padding: 12px 30px;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-top: 5px;
+  margin-right: 40px;
+}
+
+.contact-button:hover{
+  background-color: #2a70dd;
+  color: white;
+}
+
+
+/* ==========================
+   12. Footer
+========================== */
+
+.site-footer {
+  background-color: #e2e1e3;
+  color: #2970db;
+  padding: 40px 20px 20px;
+  font-size: 0.95em;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-column h3 {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column li {
+  margin-bottom: 10px;
+}
+
+.footer-column a {
+  color: #2970db;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-column a:hover {
+  color: #ddd;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 15px;
+  font-size: 0.85em;
+}
+
+/* ==========================
+   Section Expériences Professionnelles
+========================== */
+
+.experiences {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5em;
+  color: #2a70dd;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+.experience-card {
+  display: flex;
+  align-items: flex-start;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+.experience-logo img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-right: 20px;
+}
+
+.experience-details {
+  flex: 1;
+}
+
+.job-title {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #333;
+}
+
+.company-name {
+  font-size: 1.1em;
+  color: #2a70dd;
+  margin-top: 5px;
+}
+
+.dates {
+  font-size: 0.9em;
+  color: #777;
+  margin: 8px 0;
+}
+
+.missions {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsive pour mobile */
+@media screen and (max-width: 768px) {
+  .experience-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .experience-logo {
+    margin-bottom: 15px;
+  }
+
+  .experience-logo img {
+    margin-right: 0;
+  }
+}
+
+/* ==========================
+   Section Formation
+========================== */
+.formation {
+  padding: 80px 20px;
+  background-color: #fff;
+}
+
+.formation-card {
+  display: flex;
+  align-items: flex-start;
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formation-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+.formation-logo img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-right: 20px;
+}
+
+.formation-details {
+  flex: 1;
+}
+
+.degree-title {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #333;
+}
+
+.school-name {
+  font-size: 1.1em;
+  color: #2a70dd;
+  margin-top: 5px;
+}
+
+.dates {
+  font-size: 0.9em;
+  color: #777;
+  margin: 8px 0;
+}
+
+.description {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .formation-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .formation-logo {
+    margin-bottom: 15px;
+  }
+}
+
+/* ==========================
+   Section Projets
+========================== */
+.projects {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+.project-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 15px;
+}
+
+.project-content h3 {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.project-content p {
+  font-size: 0.95em;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.project-button {
+  display: inline-block;
+  background-color: #2a70dd;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.project-button:hover {
+  background-color: #1e4a99;
+}
+
+/* ==========================
+   Section Certifications
+========================== */
+.certifications {
+  padding: 80px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.certification-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border-radius: 12px;
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e0e0e0;
+  width: 120px;
+  height: 120px;
+}
+
+.certification-logo img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+.certification-logo:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+  border-color: #2a70dd;
+}
+
+/* Responsive pour écrans plus petits */
+@media screen and (max-width: 600px) {
+  .certification-logo {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+/* ==========================
+   Section Centres d'intérêts
+========================== */
+.interests {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f9f9f9 0%, #eaf0ff 100%);
+  text-align: center;
+}
+
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.interest-item {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.interest-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+.interest-icon {
+  background: #f4f8ff;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: background 0.3s ease;
+}
+
+.interest-item:hover .interest-icon {
+  background: #2a70dd;
+}
+
+.interest-icon img {
+  max-width: 60%;
+  max-height: 60%;
+  transition: transform 0.3s ease;
+}
+
+.interest-item:hover .interest-icon img {
+  transform: scale(1.1);
+}
+
+.interest-item h3 {
+  font-size: 1.2em;
+  color: #2a70dd;
+  margin-bottom: 10px;
+}
+
+.interest-desc {
+  font-size: 0.95em;
+  color: #555;
+  line-height: 1.4;
+  max-width: 180px;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .interests-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .interest-desc {
+    font-size: 0.85em;
+  }
+}
+
+/* ==========================
+   Centres d'intérêts Compact
+========================== */
+.interests {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.interests-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.interest-item {
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  padding: 15px 20px;
+  width: 180px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.interest-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Partie visible (icône + titre) */
+.interest-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.interest-main img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Description masquée au départ */
+.interest-desc {
+  font-size: 0.85em;
+  color: #555;
+  line-height: 1.4;
+  margin-top: 8px;
+  display: none;
+  transition: opacity 0.3s ease;
+}
+
+/* Affichage au survol */
+.interest-item:hover .interest-desc {
+  display: block;
+  opacity: 1;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .interest-item {
+    width: 140px;
+    padding: 12px;
+  }
+
+  .interest-main img {
+    width: 35px;
+    height: 35px;
+  }
+}
