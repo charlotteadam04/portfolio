@@ -197,6 +197,7 @@ html, body {
   font-size: 1.1em;
   color: #2a70dd;
   margin-top: 5px;
+  text-decoration: none;
 }
 
 .dates {
